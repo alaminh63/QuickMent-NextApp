@@ -1,9 +1,9 @@
-import React from "react";
+
 import Image from "next/image";
-import first from "../../../../public/TopStoires/Story.png";
-import second from "../../../../public/TopStoires/Story-1.png";
-import third from "../../../../public/TopStoires/Story-2.png";
-import fourth from "../../../../public/TopStoires/Story-3.png";
+import first from "/public/TopStoires/Story.png";
+import second from "/public/TopStoires/Story-1.png";
+import third from "/public/TopStoires/Story-2.png";
+import fourth from "/public/TopStoires/Story-3.png";
 import TopStoryButtion from "./TopStoryButtion";
 
 const TopStories = () => {

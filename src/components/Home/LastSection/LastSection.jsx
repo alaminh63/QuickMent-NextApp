@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import first from "../../../../public/LastSection/1.png";
-import second from "../../../../public/LastSection/2.png";
-import three from "../../../../public/LastSection/3.png";
+import first from "/public/LastSection/1.png";
+import second from "/public/LastSection/2.png";
+import three from "/public/LastSection/3.png";
 import LastSectionButton from "./LastSectionButton";
 
 const LastSection = () => {

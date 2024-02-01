@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import firstImage from "../../../Assets/TopArticles/Frame 1000001069.png";
-import secondImage from "../../../Assets/TopArticles/Frame 1000001069-1.png";
-import thirdImage from "../../../Assets/TopArticles/Frame 1000001069-2.png";
-import profileImage from "../../../Assets/TopArticles/Ellipse 2.png";
-import menuIcon from "../../../Assets/TopArticles/language 4.png";
+import firstImage from "/public/TopArticles/Frame 1000001069.png";
+import secondImage from "/public/TopArticles/Frame 1000001069-1.png";
+import thirdImage from "/public/TopArticles/Frame 1000001069-2.png";
+import profileImage from "/public/TopArticles/Ellipse 2.png";
+import menuIcon from "/public/TopArticles/language 4.png";
 import TopArticleButton from "./TopArticleButton";
 
 const TopArticles = () => {

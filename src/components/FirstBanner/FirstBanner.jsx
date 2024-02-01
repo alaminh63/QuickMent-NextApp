@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import categoriesIcon from "../../../public/FirstBanner/application 1.png";
-import storiesIcon from "../../../public/FirstBanner/Group-1.png";
-import advertisementsIcons from "../../../public/FirstBanner/Group-2.png";
-import articleIcon from "../../../public/FirstBanner/Group.png";
+import categoriesIcon from "/public/FirstBanner/application 1.png";
+import storiesIcon from "/public/FirstBanner/Group-1.png";
+import advertisementsIcons from "/public/FirstBanner/Group-2.png";
+import articleIcon from "/public/FirstBanner/Group.png";
 import dynamic from "next/dynamic";
 
 const FirstBanner = () => {
