@@ -18,6 +18,7 @@ import mediaIcon from "../../../public/media.png";
 import notificationIcon from "../../../public/notification.png";
 import settingIcon from "../../../public/Setting.png";
 import CustomerSupportIcon from "../../../public/CustomSupport.png";
+import { MenuIcon } from "lucide-react";
 
 const Sidebar = () => {
   const sideBarItems = [
@@ -58,7 +59,9 @@ const Sidebar = () => {
     <div className="pt-20">
       <div className="md:hidden">
         <Sheet>
-          <SheetTrigger className="">Open</SheetTrigger>
+          <SheetTrigger className="">
+            <MenuIcon className="w-12  h-12 absolute top-8" />
+          </SheetTrigger>
           <SheetContent side="left">
             <SheetHeader>
               <SheetTitle></SheetTitle>

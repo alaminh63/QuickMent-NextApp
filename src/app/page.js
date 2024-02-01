@@ -1,9 +1,12 @@
+import FirstBanner from "@/components/FirstBanner/FirstBanner";
+import TopArticles from "@/components/Home/TopArticles/TopArticles";
+
 const page = () => {
   return (
     <main>
-      <h2>Bangladesh</h2>
-      <div className="flex w-full">
-        <div className=""></div>
+      <div>
+        <FirstBanner />
+        <TopArticles />
       </div>
     </main>
   );

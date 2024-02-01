@@ -27,7 +27,7 @@ export default function CalenderPickerNavbar() {
   ); // 7 days later
 
   return (
-    <Popover className="">
+    <Popover>
       <PopoverTrigger asChild>
         <Button
           variant={"outline"}
