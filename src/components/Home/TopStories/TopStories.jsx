@@ -1,9 +1,10 @@
 
 import Image from "next/image";
-import first from "/public/TopStoires/Story.png";
-import second from "/public/TopStoires/Story-1.png";
-import third from "/public/TopStoires/Story-2.png";
-import fourth from "/public/TopStoires/Story-3.png";
+import first from "/public/TopStories/Story.png";
+import second from "/public/TopStories/Story-1.png";
+import third from "/public/TopStories/Story-2.png";
+import fourth from "/public/TopStories/Story-3.png";
+
 import TopStoryButtion from "./TopStoryButtion";
 
 
