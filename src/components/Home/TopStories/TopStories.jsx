@@ -3,7 +3,7 @@ import Image from "next/image";
 import first from "/public/TopStories/Story.png";
 import second from "/public/TopStories/Story-1.png";
 import third from "/public/TopStories/Story-2.png";
-import fourth from "/public/TopStories/Story-3.png";
+import fourth from "/public/TopStories/Story-2.png";
 
 import TopStoryButtion from "./TopStoryButtion";
 
