@@ -56,7 +56,7 @@ const Sidebar = () => {
     },
   ];
   return (
-    <div className="pt-20">
+    <div className="md:pt-20 md:sticky md:top-0">
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger className="">

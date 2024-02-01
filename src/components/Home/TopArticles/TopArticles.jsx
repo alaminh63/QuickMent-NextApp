@@ -50,11 +50,11 @@ const TopArticles = () => {
   ];
   return (
     <div className="m-2">
-        <h2 className="text-lg font-bold my-6">Top Articles</h2>
-      <div className="grid md:grid-cols-3 md:gap-4 gap-8">
+      <h2 className="text-lg font-bold my-6">Top Articles</h2>
+      <div className="grid md:grid-cols-3 md:max-w-full max-w-[380px] mx-auto md:gap-4 gap-8">
         {topArticle.map((item) => (
-          <div key={item.title}>
-            <div className="md:px-0 px-8 w-96">
+          <div key={item.title} className="">
+            <div className="md:px-0 px-8 w-96 border rounded-xl shadow-lg pb-2">
               <div>
                 <Image src={item.image} alt="" />
               </div>
@@ -78,14 +78,14 @@ const TopArticles = () => {
                     <p className="text-xs font-bold">{item.name}</p>
                   </div>
                 </div>
-                <div className="flex justify-between">
+                <div className="md:flex  justify-between">
                   <h2 className="text-[17px] font-bold">{item.title}</h2>
                   {item?.publish === "Created" ? (
-                    <p className="text-xs rounded-md px-4 py-2 bg-purple-200 text-purple-600 font-semibold">
+                    <p className="text-xs md:my-0 my-3 rounded-md px-4 py-2 bg-purple-200 text-purple-600 font-semibold">
                       {item.publish}
                     </p>
                   ) : (
-                    <p className="text-xs  rounded-md px-4 py-2 bg-green-200 text-green-500 font-semibold">
+                    <p className="text-xs md:my-0  rounded-md px-4 py-2 bg-green-200 text-green-500 font-semibold">
                       {item.publish}
                     </p>
                   )}

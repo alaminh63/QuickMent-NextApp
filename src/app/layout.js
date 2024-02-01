@@ -14,11 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex  w-full">
-          <div className="md:w-1/6 mx-">
+        <div className="md:flex  w-full">
+          <div className="md:w-1/6 ">
             <Sidebar />
           </div>
-          <div className="md:w-5/6 px-4">
+          <div className="md:w-5/6 ">
             <Navbar />
             {children}
           </div>
