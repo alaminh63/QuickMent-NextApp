@@ -27,9 +27,9 @@ const FirstBanner = () => {
     },
   ];
   return (
-    <div className="border m-4">
-      <div className="md:block flex m-6 flex-col items-center justify-center my-4">
-        <h2 className=" text-xl font-bold">Hello Admin,</h2>
+    <div className="">
+      <div className="md:block flex  flex-col items-center justify-center my-4 ml-2">
+        <h2 className=" text-lg font-bold">Hello Admin,</h2>
         <p className="text-[15px] text-gray-500">
           This is what we got you for today.
         </p>

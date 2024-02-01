@@ -15,10 +15,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="flex  w-full">
-          <div className="md:w-1/6 ">
+          <div className="md:w-1/6 mx-">
             <Sidebar />
           </div>
-          <div className="md:w-5/6">
+          <div className="md:w-5/6 px-4">
             <Navbar />
             {children}
           </div>
