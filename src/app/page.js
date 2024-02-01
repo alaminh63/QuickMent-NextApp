@@ -2,7 +2,6 @@ import FirstBanner from "@/components/FirstBanner/FirstBanner";
 import LastSection from "@/components/Home/LastSection/LastSection";
 import TopArticles from "@/components/Home/TopArticles/TopArticles";
 import TopStories from "@/components/Home/TopStories/TopStories";
-
 const page = () => {
   return (
     <main>
