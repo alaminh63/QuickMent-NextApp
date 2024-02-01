@@ -11,17 +11,18 @@ import {
 import loggedUserPhoto from "../../../public/loggedUser.png";
 import { Input } from "../ui/input";
 import Image from "next/image";
-import { Calendar } from "../ui/calendar";
-import CalenderPicker from "./CalenderPickerNavbar";
+import React from "react";
+import CalenderPickerNavbar from "./CalenderPickerNavbar";
+
 const Navbar = () => {
   return (
-    <div className="py-2 bg-red-500 flex items-center justify-between px-12">
+    <div className="border-b flex items-center justify-between px-12 py-2">
       <div>
         <Input type="text" placeholder="Search" className="px-8 py-2" />
       </div>
-      <div className="flex">
-        <CalenderPicker />
-        <Menubar className=" flex justify-between gap-14 px-3 border py-8 items-center ">
+      <div className="flex items-center gap-2">
+        <CalenderPickerNavbar />
+        <Menubar className=" flex justify-between gap-14 px-3 border py-7 items-center ">
           <div className="flex gap-1 items-center">
             <div className="w-12">
               <Image
