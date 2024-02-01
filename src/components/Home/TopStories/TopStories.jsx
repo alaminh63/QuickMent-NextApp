@@ -1,9 +1,10 @@
+import React from "react";
 import Image from "next/image";
 import first from "../../../../public/TopStoires/Story.png";
 import second from "../../../../public/TopStoires/Story-1.png";
 import third from "../../../../public/TopStoires/Story-2.png";
 import fourth from "../../../../public/TopStoires/Story-3.png";
-import { Button } from "@/components/ui/button";
+import TopStoryButtion from "./TopStoryButtion";
 
 const TopStories = () => {
   const TopStoriesArray = [
@@ -40,6 +41,7 @@ const TopStories = () => {
       image: [fourth],
     },
   ];
+
   return (
     <div className="m-2">
       <h2 className="text-lg font-bold my-6">Top Stories</h2>
@@ -57,10 +59,10 @@ const TopStories = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-eye"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-eye"
                   >
                     <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
                     <circle cx="12" cy="12" r="3" />
@@ -75,10 +77,10 @@ const TopStories = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-bar-chart-4"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-bar-chart-4"
                   >
                     <path d="M3 3v18h18" />
                     <path d="M13 17V9" />
@@ -93,22 +95,13 @@ const TopStories = () => {
                 </h2>
                 <div className="flex justify-between items-center">
                   <h2 className="font-bold text-[13px]">{item.Category}</h2>
-                  <p2 className=" text-[12px] text-gray-300">{item.date}</p2>
-                  {/* {
-                        item.publish === ""
-                    } */}
-                  <p className="px-3 py-2 bg-opacity-60 text-black font-bold rounded-md bg-white text-[12px]">
+                  <p className=" text-[12px] text-gray-300">{item.date}</p>
+                  <p className={`px-3 py-2 bg-opacity-60 text-black font-bold rounded-md ${item.publish === "Created" ? 'bg-white' : 'bg-purple-200 text-purple-600'}`}>
                     {item.publish}
                   </p>
                 </div>
                 <div className="flex mt-3  gap-4 items-center justify-between my-2">
-                  <Button
-                    variant="secondary"
-                    className="bg-purple-200 w-5/6 py-6"
-                  >
-                    View
-                  </Button>
-
+                  <TopStoryButtion />
                   <div className="p-1 bg-slat-400 bg-purple-100 text-black rounded-md">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -117,10 +110,10 @@ const TopStories = () => {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-more-horizontal"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-more-horizontal"
                     >
                       <circle cx="12" cy="12" r="1" />
                       <circle cx="19" cy="12" r="1" />

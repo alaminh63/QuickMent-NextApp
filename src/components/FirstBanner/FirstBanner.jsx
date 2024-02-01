@@ -1,10 +1,13 @@
+import React from "react";
 import Image from "next/image";
 import categoriesIcon from "../../../public/FirstBanner/application 1.png";
 import storiesIcon from "../../../public/FirstBanner/Group-1.png";
 import advertisementsIcons from "../../../public/FirstBanner/Group-2.png";
 import articleIcon from "../../../public/FirstBanner/Group.png";
+import dynamic from "next/dynamic";
+
 const FirstBanner = () => {
-  const FirstBanner = [
+  const FirstBannerData = [
     {
       title: "Articles",
       secondaryText: "4,950 New Updates",
@@ -16,7 +19,7 @@ const FirstBanner = () => {
       icon: categoriesIcon,
     },
     {
-      title: " Stories ",
+      title: "Stories",
       secondaryText: "4,193 New Updates",
       icon: storiesIcon,
     },
@@ -26,22 +29,23 @@ const FirstBanner = () => {
       icon: advertisementsIcons,
     },
   ];
+
   return (
-    <div className="">
-      <div className="md:block flex  flex-col items-center justify-center my-4 ml-2">
-        <h2 className=" text-lg font-bold">Hello Admin,</h2>
+    <>
+      <div className="md:block flex flex-col items-center justify-center my-4 ml-2">
+        <h2 className="text-lg font-bold">Hello Admin,</h2>
         <p className="text-[15px] text-gray-500">
           This is what we got you for today.
         </p>
       </div>
-      <div className="md:flex  justify-evenly">
-        {FirstBanner.map((item) => (
+      <div className="md:flex justify-evenly">
+        {FirstBannerData.map((item) => (
           <div
             key={item.title}
             className="bg-slate-100 m-4 flex items-center justify-center h-[90px] rounded-lg md:w-[270px]"
           >
             <div className="flex items-center gap-2">
-              <div className="bg-slate-200 p-4 rounded-full ">
+              <div className="bg-slate-200 p-4 rounded-full">
                 <Image className="w-8 h-8" src={item.icon} alt="" />
               </div>
               <div>
@@ -52,8 +56,8 @@ const FirstBanner = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
-export default FirstBanner;
+export default dynamic(() => Promise.resolve(FirstBanner), { ssr: false });

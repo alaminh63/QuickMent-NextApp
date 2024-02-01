@@ -1,4 +1,3 @@
-"use client";
 import {
   Sheet,
   SheetContent,
@@ -64,7 +63,7 @@ const Sidebar = () => {
           </SheetTrigger>
           <SheetContent side="left">
             <SheetHeader>
-              <SheetTitle></SheetTitle>
+              <SheetTitle> {/* Add a title here if needed */}</SheetTitle>
               <SheetDescription>
                 <p className=" mb-4 flex gap-2 items-center rounded-lg px-4 py-2">
                   <div>
@@ -74,16 +73,41 @@ const Sidebar = () => {
                 </p>
                 <ul className="flex flex-col gap-2 ">
                   {sideBarItems.map((item) => (
-                    <li
-                      className=" flex gap-2 items-center rounded-lg px-4 py-2"
-                      key={item.title}
-                    >
-                      <div>
-                        <Image width="18" height="18" src={item?.icon} alt="" />
-                      </div>
+                    <div key={item.title} className="text-black">
+                      {item.title === "Content" ? (
+                        <li
+                          className=" flex bg-purple-500 gap-2 items-center rounded-lg px-4 py-2"
+                          key={item.title}
+                        >
+                          <div>
+                            <Image
+                              width="18"
+                              height="18"
+                              src={item?.icon}
+                              alt=""
+                            />
+                          </div>
 
-                      {item.title}
-                    </li>
+                          <p>{item.title}</p>
+                        </li>
+                      ) : (
+                        <li
+                          className=" flex gap-2 items-center rounded-lg px-4 py-2"
+                          key={item.title}
+                        >
+                          <div>
+                            <Image
+                              width="18"
+                              height="18"
+                              src={item?.icon}
+                              alt=""
+                            />
+                          </div>
+
+                          <p>{item.title}</p>
+                        </li>
+                      )}
+                    </div>
                   ))}
                 </ul>
 
@@ -112,16 +136,31 @@ const Sidebar = () => {
         </p>
         <ul className="flex flex-col gap-2 ">
           {sideBarItems.map((item) => (
-            <li
-              className=" flex gap-2 items-center rounded-lg px-4 py-2"
-              key={item.title}
-            >
-              <div>
-                <Image width="18" height="18" src={item?.icon} alt="" />
-              </div>
+            <div key={item.title}>
+              {item.title === "Content" ? (
+                <li
+                  className=" flex bg-purple-500 gap-2 items-center rounded-lg px-4 py-2"
+                  key={item.title}
+                >
+                  <div>
+                    <Image width="18" height="18" src={item?.icon} alt="" />
+                  </div>
 
-              {item.title}
-            </li>
+                  <p>{item.title}</p>
+                </li>
+              ) : (
+                <li
+                  className=" flex gap-2 items-center rounded-lg px-4 py-2"
+                  key={item.title}
+                >
+                  <div>
+                    <Image width="18" height="18" src={item?.icon} alt="" />
+                  </div>
+
+                  <p>{item.title}</p>
+                </li>
+              )}
+            </div>
           ))}
         </ul>
 

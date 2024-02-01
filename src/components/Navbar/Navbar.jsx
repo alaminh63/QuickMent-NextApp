@@ -13,23 +13,20 @@ import { Input } from "../ui/input";
 import Image from "next/image";
 import React from "react";
 import CalenderPickerNavbar from "./CalenderPickerNavbar";
-
+import dynamic from "next/dynamic";
 const Navbar = () => {
   return (
     <div className="border-b md:flex items-center justify-between px-12 py-2">
       <div className="flex items-center">
         <div>
-          <Input type="text" placeholder="Search" className="px-8 py-2  " />
+          <Input type="text" placeholder="Search" className="px-8 py-2" />
         </div>
-        <Menubar className="md:hidden flex justify-between md:gap-14  px-3 border py-7 items-center ">
+        <Menubar className="md:hidden flex justify-between md:gap-14 px-3 border py-7 items-center">
           <div className="flex gap-1 items-center">
             <div className="w-12">
-              <Image
-                src={loggedUserPhoto}
-                alt="profile photo of logged u user"
-              />
+              <Image src={loggedUserPhoto} alt="profile photo of logged user" />
             </div>
-            <div className="md:block flex">
+            <div className="md:block flex flex-col">
               <p className="md:text-xs text-[10px]">Welcome back,</p>
               <h2 className="md:text-lg text-[12px] font-bold">
                 Akshita Patel
@@ -58,23 +55,18 @@ const Navbar = () => {
               <MenubarItem>New Window</MenubarItem>
               <MenubarSeparator />
               <MenubarItem>Share</MenubarItem>
-              <MenubarSeparator />
-              <MenubarItem></MenubarItem>
             </MenubarContent>
           </MenubarMenu>
         </Menubar>
       </div>
       <div className="flex items-center gap-2">
         <CalenderPickerNavbar />
-        <Menubar className="md:flex hidden  justify-between md:gap-14  px-3 border py-7 items-center ">
+        <Menubar className="md:flex hidden justify-between md:gap-14 px-3 border py-7 items-center">
           <div className="flex gap-1 items-center">
             <div className="w-12">
-              <Image
-                src={loggedUserPhoto}
-                alt="profile photo of logged u user"
-              />
+              <Image src={loggedUserPhoto} alt="profile photo of logged user" />
             </div>
-            <div className="md:block flex">
+            <div className="md:block flex flex-col">
               <p className="md:text-xs text-[10px]">Welcome back,</p>
               <h2 className="md:text-lg text-[12px] font-bold">
                 Akshita Patel
@@ -103,8 +95,6 @@ const Navbar = () => {
               <MenubarItem>New Window</MenubarItem>
               <MenubarSeparator />
               <MenubarItem>Share</MenubarItem>
-              <MenubarSeparator />
-              <MenubarItem></MenubarItem>
             </MenubarContent>
           </MenubarMenu>
         </Menubar>
@@ -113,4 +103,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default dynamic(() => Promise.resolve(Navbar), { ssr: false });
